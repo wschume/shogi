@@ -16,7 +16,7 @@ class Piece:
 class Field:
     piece: Piece | None = None
     selectable: bool = True
-    selected: bool = False
+    selected: bool =False
 
     field_size: ClassVar[int] = 40
 
