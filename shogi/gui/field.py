@@ -37,7 +37,7 @@ class FieldControl(ft.Container):
         container = ft.Container(
             width=Field.field_size,
             height=Field.field_size,
-            alignment=ft.Alignment.center(),
+            alignment=ft.Alignment.CENTER,
         )
 
         if field.selectable:
