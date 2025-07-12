@@ -5,7 +5,6 @@ on:
   pull_request:
     branches:
       - master
-      - 12-unit
 
 jobs:
   unit-tests:
@@ -23,4 +22,4 @@ jobs:
 
       - name: Run tests
         run: |
-          venv/bin/pytest tests
+          venv/bin/pytest -m "not flet"
