@@ -1,9 +1,11 @@
 import flet as ft
+import pytest
 
 from shogi.gui.board import Board, BoardControl
 from shogi.gui.field import Piece
 
 
+@pytest.mark.flet
 def test_simple(ft_app):
     def main(page: ft.Page):
         board = Board()
