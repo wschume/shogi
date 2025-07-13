@@ -7,7 +7,7 @@ on:
       - 8-compile
 
 jobs:
-  black:
+  compile-apk:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
