@@ -16,7 +16,7 @@ services:
         WORKDIR /app
         
 
-    command: /venv/bin/flet build -v apk
+    command: /venv/bin/flet build -v --no-rich-output apk
     user: "root:root"
 
     mem_limit: 8g
