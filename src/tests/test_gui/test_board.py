@@ -1,8 +1,8 @@
 import flet as ft
 import pytest
 
-from shogi.gui.board import Board, BoardControl
-from shogi.gui.field import Piece
+from src.shogi.gui.board import Board, BoardControl
+from src.shogi.gui.field import Piece
 
 
 @pytest.mark.flet

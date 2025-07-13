@@ -1,7 +1,7 @@
 import flet as ft
 import pytest
 
-from shogi.gui.game import Game, GameControl
+from src.shogi.gui.game import Game, GameControl
 
 
 @pytest.mark.flet

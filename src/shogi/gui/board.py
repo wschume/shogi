@@ -5,7 +5,7 @@ import flet as ft
 from blinker import Signal
 from flet import canvas as cv
 
-from shogi.gui.field import Field, FieldControl
+from src.shogi.gui.field import Field, FieldControl
 
 
 @dataclass
