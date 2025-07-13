@@ -1,0 +1,34 @@
+[project]
+name = "shogi"
+version = "0.1.0"
+description = ""
+readme = ""
+requires-python = ">=3.10"
+authors = [
+    { name = "Woltan Schume", email = "w.schume@gmail.com" }
+]
+dependencies = [
+    "flet==0.70.0.dev5089",
+    "blinker==1.9.0"
+]
+
+[tool.flet]
+# Docs: https://flet.dev/docs/publish
+org = "com.mycompany"
+product = "shogi"
+company = "Woltan & Friends"
+copyright = "Copyright (C) 2025"
+
+[tool.flet.app]
+path = "src"
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.70.0.dev5089",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+flet = { extras = ["all"], version = "0.70.0.dev5089" }

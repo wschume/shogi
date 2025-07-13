@@ -18,7 +18,7 @@ class Field:
     selectable: bool = True
     selected: bool = False
 
-    field_size: ClassVar[int] = 40
+    field_size: ClassVar[int] = 80
 
     on_click: Signal = dataclass_field(init=False, default_factory=Signal)
 

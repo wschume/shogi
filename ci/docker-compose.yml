@@ -1,0 +1,24 @@
+services:
+  android:
+    build:
+      dockerfile_inline: |
+        FROM instrumentisto/flutter:latest
+        
+        RUN apt update
+        RUN apt install -y python3-pip python3-venv
+        RUN rm -rf /var/lib/apt/lists/*
+        RUN python3 -m venv venv
+        RUN /venv/bin/pip install --pre 'flet[all]==0.70.0.dev5089'
+        RUN mkdir /tmp_app
+        WORKDIR /tmp_app
+        RUN echo "import flet;flet.run(lambda p: None)" > main.py
+        RUN /venv/bin/flet build -v apk
+        WORKDIR /app
+        
+
+    command: /venv/bin/flet build -v apk
+
+    mem_limit: 8g
+    image: flet-android
+    volumes:
+      - ..:/app
