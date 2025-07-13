@@ -17,6 +17,7 @@ services:
         
 
     command: /venv/bin/flet build -v apk
+    user: "root:root"
 
     mem_limit: 8g
     image: flet-android
