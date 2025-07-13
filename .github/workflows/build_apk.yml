@@ -1,0 +1,24 @@
+name: build apk
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 8-compile
+
+jobs:
+  compile-apk:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run build
+        run: |
+          cd ci
+          docker compose run --rm android
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: shogi.apk
+          path: build/apk/app-release.apk

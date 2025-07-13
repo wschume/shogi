@@ -4,8 +4,8 @@ from typing import Literal, cast
 import flet as ft
 import flet.canvas as cv
 
-from shogi.gui.board import Board, BoardControl
-from shogi.gui.field import Field, Piece
+from .board import Board, BoardControl
+from .field import Field, Piece
 
 
 @dataclass
